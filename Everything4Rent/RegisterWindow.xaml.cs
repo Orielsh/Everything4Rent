@@ -179,7 +179,7 @@ namespace Everything4Rent
             for (int i = 1; i <= 12; i++)
                 choose_month.Items.Add(i.ToString());
 
-            for (int i = 2000; i > 1948; i--)
+            for (int i = 2000; i > 1940; i--)
                 choose_year.Items.Add(i.ToString());
 
         }
