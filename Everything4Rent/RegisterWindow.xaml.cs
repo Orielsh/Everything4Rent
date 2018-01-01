@@ -95,7 +95,6 @@ namespace Everything4Rent
                 m_connection.Open();
                 string date = choose_day.SelectedItem.ToString() + "/" + choose_month.SelectedItem.ToString() + "/" + choose_year.SelectedItem.ToString();
 
-                //string strSql = "INSERT INTO Users([userName],[firstName],[lastName],[Password],[gender],[mailAddress],[birthDate],[image])values(?,?,?,?,?,?,?,?)";
                 string insertSQL = "INSERT INTO Users([userName],[firstName],[lastName],[Password],[gender],[mailAddress],[birthDate])values(?,?,?,?,?,?,?)";
 
                 using (OleDbCommand command = new OleDbCommand(insertSQL, m_connection))
@@ -107,8 +106,7 @@ namespace Everything4Rent
                     command.Parameters.AddWithValue("[Password]", box_password.Password);
                     command.Parameters.AddWithValue("[gender]", box_gender.SelectedItem.ToString());
                     command.Parameters.AddWithValue("[mailAddress]", box_email.Text);
-                    command.Parameters.AddWithValue("[birthDate]", date);
-                    //command.Parameters.AddWithValue("[image]", image);
+                    command.Parameters.AddWithValue("[birthDate]", date);                    
 
                     command.ExecuteNonQuery();
                 }
