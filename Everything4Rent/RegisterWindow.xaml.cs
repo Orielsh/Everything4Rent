@@ -126,6 +126,7 @@ namespace Everything4Rent
             TextBox textbox1 = new TextBox();
             OpenFileDialog open = new OpenFileDialog();
             open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+
             if (open.ShowDialog() == true)
             {
                 textbox1.Text = open.FileName;
