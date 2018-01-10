@@ -24,6 +24,7 @@ namespace Everything4Rent
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
 
